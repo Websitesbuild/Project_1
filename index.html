@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flip Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #07112e;
+        }
+
+        h1 {
+            text-align: center;
+            color: red;
+            background-color: #07112e;
+            padding: 20px;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            perspective: 1000px;
+            margin: 50px;
+        }
+
+        .card-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-wrapper {
+            transform: rotateY(180deg);
+        }
+
+        .card-wrapper .imgBox,
+        .card-wrapper .contentBox {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card-wrapper .imgBox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card-wrapper .contentBox {
+            background-color: #07112e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 2.5em;
+            border-radius: 20px;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ff0000; /* Change to your desired button background color */
+                color: #ffffff; /* Change to your desired button text color */
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Any One Card Love </h1>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="1.avif" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2>Movie date</h2>
+                    <h3>Go to the cinema. Movies bring out emotions</h3>
+                    <a href="https://www.instagram.com/amitsharma_61999/" target="_blank" class="btn">Let's Go</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="1.avif" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2>Walk date</h2>
+                    <h3>Make time to just take a walk as you bond. Walk for long as you hold hands, laugh, bump shoulder to shoulder.</h3>
+                    <a href="https://www.instagram.com/amitsharma_61999/" target="_blank" class="btn">Let's Go</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="1.avif" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2>Picnic date</h2>
+                    <h3>There is something special and free about the outdoors. Pack up some food and drinks and a leso, find a spot and have fun</h3>
+                    <a href="https://www.instagram.com/amitsharma_61999/" target="_blank" class="btn">Let's Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
